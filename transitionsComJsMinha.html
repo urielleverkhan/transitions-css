@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .minhaDiv{
+        width: 100%;
+        height: 2000px;
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
+        margin-top: 50px;
+        
+
+    }
+    .divAparecer{
+        width: 150px;
+        overflow: hidden;
+        border: 1px solid black;
+     
+    
+    }
+    .conteudoDivAparecer{
+        font-size: 18px;
+        margin-left: -150px;
+        -webkit-animation: slideEsquerda 1s forwards;
+        -webkit-animation-delay:1s;
+        animation: slideEsquerda 1s forwards;
+        animation-delay: 2s;
+        animation-play-state: paused;
+    }
+
+    .move{
+        animation-play-state: running!important;
+    }
+    
+    @keyframes slideEsquerda{
+        0%{
+            margin-left: -150px;
+        }
+        100%{
+            margin-left: 0;
+        }
+    }
+</style>
+
+
+<body>
+    
+    <div class="minhaDiv">
+        <div class="divAparecer">
+            <h1 class="conteudoDivAparecer" id="conteudoDivAparecerId">Um texto aqui</h1>
+        </div>
+    </div>
+
+
+   
+    <script>
+        const divATransitar = document.getElementById('conteudoDivAparecerId').classList;
+        console.log(divATransitar);
+    
+       
+                
+            divATransitar.classList.add('move');
+                
+       
+                    
+    </script>
+</body>
+
+</html>
+

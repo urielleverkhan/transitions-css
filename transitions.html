@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions css</title>
+    <style>
+                        .wrapper1 {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100px;
+                    height: 100px; 
+                    border: 1px solid black;
+                    margin: 40px;
+                }
+
+                #slide1 {
+                    position: absolute;
+                    left: -100px;
+                    width: 100px;
+                    height: 100px;
+                    background: blue;
+                    transition: 1s;
+                }
+
+
+                .wrapper1:hover #slide1 {
+                    transition: 1s;
+                    left: 0;
+                }
+    
+                .wrapper2 {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100px;
+                    height: 100px; 
+                    border: 1px solid black;
+                    margin: 0 40px;
+                }
+
+                #slide2 {
+                    position: absolute;
+                    left: -100px;
+                    width: 100px;
+                    height: 100px;
+                    background: blue;
+                    -webkit-animation: slide 1s forwards;
+                    -webkit-animation-delay:1s;
+                    animation: slide 1s forwards;
+                    animation-delay: 2s;
+                }
+
+                @-webkit-keyframes slide {
+                    100% { left: 0; }
+                }
+
+                @keyframes slide {
+                    100% { left: 0; }
+                }
+
+
+                .wrapper3 {
+                    position: relative;
+                    overflow: hidden;
+                    width: 100px;
+                    height: 100px; 
+                    border: 1px solid black;
+                    margin: 40px;
+                }
+
+                #slide3{
+                    position: absolute;
+                    width: 100px;
+                    margin-left: -100px;
+                    height: 100px;
+                    background: blue;
+                    -webkit-animation: slideEsquerda 1s forwards;
+                    -webkit-animation-delay:1s;
+                    animation: slideEsquerda 1s forwards;
+                    animation-delay: 2s;
+                }
+
+                @keyframes slideEsquerda {
+                    0% {
+                        margin-left: -100px;
+                    }
+                    
+                    100% {
+                        margin-left: 0;
+                    }
+                    
+                }
+
+                .wrapper4{
+                    position: absolute;
+                    height: 40px;
+                    margin-left:40px;
+                }
+                .wrapper4 h1{
+                    font-size: 14px;
+                    transition: 2s;
+                }
+
+                .wrapper4 h1:hover {
+                    transition: 2s;
+                    font-size: 30px;
+                }
+
+                
+                
+}
+
+    </style>
+</head>
+<body>
+    <div class="wrapper1">
+        <img id="slide1" src="./img-neko.jpg" />
+    </div>
+
+    <div class="wrapper2">
+        <img id="slide2" src="./img-neko.jpg" />
+    </div>
+
+    <div class="wrapper3">
+        <img id="slide3" src="./img-neko.jpg" />
+    </div>
+
+    <div class="wrapper4">
+        <h1>Um texto aqui</h1>
+    </div>
+
+    <div class="wrapper5">
+        <h1>Um texto aqui</h1>
+    </div>
+    
+</body>
+</html>
